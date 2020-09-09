@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './search.css';
 function Search(props) {
-  const [query, setQuery] = useState('man');
+  const [query, setQuery] = useState('');
 
   const handleInputChanges = (e) => {
     setQuery(e.target.value);
