@@ -27,7 +27,7 @@ const Trending = () => {
       setLoading(true);
       const { results } = await fetchMovies(currentPage);
       console.log(results);
-      setMovies(results);
+      setMovies((movies) => [...movies, ...results]);
       setLoading(false);
     })();
   }, [currentPage]);
