@@ -46,5 +46,6 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #28df99;
   border-radius: 2em;
 }
