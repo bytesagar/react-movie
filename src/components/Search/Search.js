@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import './search.css';
 function Search(props) {
-  const [query, setQuery] = useState('');
+  const [query, setQuery] = useState('man');
 
   const handleInputChanges = (e) => {
     setQuery(e.target.value);
   };
   const callSearch = (e) => {
     e.preventDefault();
-    props.search(query);
+    if (query) {
+      props.search(query);
+    }
     setQuery('');
   };
   return (
@@ -18,6 +20,7 @@ function Search(props) {
         placeholder="search move here..."
         value={query}
         autoFocus
+        required
         onChange={handleInputChanges}
       />
     </form>
