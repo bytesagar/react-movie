@@ -40,9 +40,10 @@ function Home() {
       <Navbar />
       <Container className="mt-3">
         <Search search={search} />
+        <Container>{loading && spinner}</Container>
+
         <MovieList movies={movies} />
       </Container>
-      <Container>{loading && spinner}</Container>
 
       {/* <Trending /> */}
     </div>

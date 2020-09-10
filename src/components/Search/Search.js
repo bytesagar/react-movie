@@ -14,16 +14,18 @@ function Search(props) {
     setQuery('');
   };
   return (
-    <form onSubmit={callSearch}>
-      <input
-        type="text"
-        placeholder="search move here..."
-        value={query}
-        autoFocus
-        required
-        onChange={handleInputChanges}
-      />
-    </form>
+    <div>
+      <form onSubmit={callSearch}>
+        <input
+          type="text"
+          placeholder="search move here..."
+          value={query}
+          autoFocus
+          required
+          onChange={handleInputChanges}
+        />
+      </form>
+    </div>
   );
 }
 
