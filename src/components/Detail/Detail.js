@@ -57,7 +57,11 @@ function Detail(props) {
         <h4>Overview</h4>
         {movie.overview}
         <br />
-        <Link to="/">Go Back</Link>
+        <h4 className="voting">  Rating: {Math.floor(movie.popularity * 100)/100} <ion-icon name="star-sharp" style={{color:'rgb(255, 251, 0)',fontSize:'13px'}}></ion-icon></h4>
+        <h4 style={{fontSize:"16px", marginTop:'20px'}}>Status: {movie.status}</h4>       
+       
+      <center><Link className="goback-btn" to="/">Go Back</Link></center>  
+
       </div>
     </div>
   );
