@@ -33,3 +33,22 @@
     margin-bottom: 1em;
   }
 }
+
+.voting{
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.goback-btn{
+  background-color: rgb(3, 65, 3);
+  padding: 9px;
+  color: #fff;
+  text-decoration: none;
+  
+  
+}
+.goback-btn:hover{
+  color: rgb(224, 224, 224);
+  background-color: rgba(0, 128, 0, 0.842);
+}
+
