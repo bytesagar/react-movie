@@ -24,6 +24,7 @@ function Detail(props) {
         }
         setLoading(false);
       });
+    // eslint-disable-next-line
   }, []);
 
   let spinner = (
@@ -33,10 +34,10 @@ function Detail(props) {
   );
   const poster =
     movie && movie.poster_path ? (
-      <img src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`} />
+      <img src={`https://image.tmdb.org/t/p/w400/${movie.poster_path}`} alt={movie.original_title} />
     ) : (
-      <img src={`${logo1}`} />
-    );
+        <img src={`${logo1}`} alt="Movie" />
+      );
   const release = movie.release_date;
   const release_date = new Date(release).getFullYear();
 
@@ -58,10 +59,10 @@ function Detail(props) {
         <h4>Overview</h4>
         {movie.overview}
         <br />
-        <h4 className="voting">  Rating: {Math.floor(movie.popularity * 100)/100} <ion-icon name="star-sharp" style={{color:'rgb(255, 251, 0)',fontSize:'13px'}}></ion-icon></h4>
-        <h4 style={{fontSize:"16px", marginTop:'20px'}}>Status: {movie.status}</h4>       
-       
-          <center><button className="goback-btn" onClick={history.goBack}>Go Back</button></center>  
+        <h4 className="voting">  Rating: {Math.floor(movie.popularity * 100) / 100} <ion-icon name="star-sharp" style={{ color: 'rgb(255, 251, 0)', fontSize: '13px' }}></ion-icon></h4>
+        <h4 style={{ fontSize: "16px", marginTop: '20px' }}>Status: {movie.status}</h4>
+
+        <button className="goback-btn" onClick={history.goBack}>Go Back</button>
 
       </div>
     </div>

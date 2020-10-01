@@ -10,16 +10,18 @@ function Movie({ movie }) {
       alt={movie.id}
     />
   ) : (
-    <img src={logo1} alt={movie.id} />
-  );
+      <img src={logo1} alt={movie.id} />
+    );
   return (
     <div className="movie">
-      <li key={Math.random()}>
-        <Link to={`/${movie.id}/details`}>{poster}</Link>
-      </li>
-      <div className="movie-details">
-        <Button color="success">More Details</Button>
-      </div>
+      <Link to={`/${movie.id}/details`}>
+        <li key={Math.random()}>
+          {poster}
+        </li>
+        <div className="movie-details">
+          <Button color="success">More Details</Button>
+        </div>
+      </Link>
     </div>
   );
 }
