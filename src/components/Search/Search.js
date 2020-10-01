@@ -18,7 +18,7 @@ function Search(props) {
       <form onSubmit={callSearch}>
         <input
           type="text"
-          placeholder="search move here..."
+          placeholder="Search movie here..."
           value={query}
           autoFocus
           required

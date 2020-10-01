@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState } from 'react';
 import { Spinner, Container } from 'reactstrap';
+
 import MovieList from '../MovieLists/MovieList';
 
 import './home.css';
