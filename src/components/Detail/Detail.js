@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import './detail.css';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { movieDetailUrl } from '../../config/api_url';
 import { key } from '../../config/api_key';
-import { Container, Spinner } from 'reactstrap';
+import { Spinner } from 'reactstrap';
 import logo1 from './logo1.png';
 
 function Detail(props) {
   const [movie, setMovie] = useState({});
   const [loading, setLoading] = useState(true);
+  const history = useHistory()
 
   useEffect(() => {
     const url = movieDetailUrl.replace(':movieId', props.match.params.movie_id);
@@ -60,7 +61,7 @@ function Detail(props) {
         <h4 className="voting">  Rating: {Math.floor(movie.popularity * 100)/100} <ion-icon name="star-sharp" style={{color:'rgb(255, 251, 0)',fontSize:'13px'}}></ion-icon></h4>
         <h4 style={{fontSize:"16px", marginTop:'20px'}}>Status: {movie.status}</h4>       
        
-      <center><Link className="goback-btn" to="/">Go Back</Link></center>  
+          <center><button className="goback-btn" onClick={history.goBack}>Go Back</button></center>  
 
       </div>
     </div>
